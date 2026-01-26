@@ -73,9 +73,6 @@ const ProfitModel: React.FC<ProfitModelProps> = ({ centerName }) => {
                         <span>Sugerowana cena detaliczna:</span>
                         <span className="font-black text-slate-900 text-base">99,00 PLN <span className="text-[10px] font-normal text-slate-400">brutto</span></span>
                     </div>
-                    <div className="mb-1 text-[10px] md:text-xs text-slate-500 font-medium">
-                        Finalna kwota sprzedaży ustalana jest indywidualnie.
-                    </div>
                     <div className="flex justify-between items-center text-[10px] md:text-xs bg-green-50 px-2 py-1 rounded text-green-800 font-bold mt-1">
                         <span>Podział zysków:</span>
                         {/* Dynamiczny podział zysków */}

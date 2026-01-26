@@ -118,23 +118,23 @@ const ProfitModel: React.FC<ProfitModelProps> = ({ centerName }) => {
                     <ul className="space-y-1.5 text-[10px] md:text-xs font-medium">
                         <li className="flex justify-between border-b border-slate-200 border-dashed pb-1">
                             <span>Pakiet do 25 szt.</span>
-                            <span className="text-slate-500 font-medium">{centerName ? `Cena dla ${centerName}` : 'Cena ustalana indywidualnie'}</span>
+                            <span className="text-slate-900 font-bold">49,00 PLN</span>
                         </li>
                         <li className="flex justify-between border-b border-slate-200 border-dashed pb-1">
                             <span>Pakiet 26-50 szt.</span>
-                            <span className="text-slate-500 font-medium">{centerName ? `Cena dla ${centerName}` : 'Cena ustalana indywidualnie'}</span>
+                            <span className="text-slate-900 font-bold">45,00 PLN</span>
                         </li>
                          <li className="flex justify-between border-b border-slate-200 border-dashed pb-1">
                                 <span>Pakiet 51-100 szt.</span>
-                                <span className="text-slate-500 font-medium">{centerName ? `Cena dla ${centerName}` : 'Cena ustalana indywidualnie'}</span>
+                                <span className="text-slate-900 font-bold">40,00 PLN</span>
                         </li>
                         <li className="flex justify-between border-b border-slate-200 border-dashed pb-1">
                             <span>Pakiet 101-200 szt.</span>
-                            <span className="text-slate-500 font-medium">{centerName ? `Cena dla ${centerName}` : 'Cena ustalana indywidualnie'}</span>
+                            <span className="text-slate-900 font-bold">35,00 PLN</span>
                         </li>
                         <li className="flex justify-between">
                             <span className="font-bold text-blue-900">Pakiet powyżej 200 szt.</span>
-                            <span className="text-slate-500 font-medium">{centerName ? `Cena dla ${centerName}` : 'Cena ustalana indywidualnie'}</span>
+                            <span className="text-slate-900 font-bold">30,00 PLN</span>
                         </li>
                     </ul>
                 </div>
@@ -221,23 +221,23 @@ const ProfitModel: React.FC<ProfitModelProps> = ({ centerName }) => {
                                     <ul className="space-y-1.5 text-[10px] font-medium">
                                         <li className="flex justify-between border-b border-slate-200 border-dashed pb-1">
                                             <span>Pakiet do 25 szt.</span>
-                                            <span className="text-slate-500 font-medium">{centerName ? `Cena dla ${centerName}` : 'Cena ustalana indywidualnie'}</span>
+                                            <span className="text-slate-900 font-bold">49,00 PLN</span>
                                         </li>
                                         <li className="flex justify-between border-b border-slate-200 border-dashed pb-1">
                                             <span>Pakiet 26-50 szt.</span>
-                                            <span className="text-slate-500 font-medium">{centerName ? `Cena dla ${centerName}` : 'Cena ustalana indywidualnie'}</span>
+                                            <span className="text-slate-900 font-bold">45,00 PLN</span>
                                         </li>
                                          <li className="flex justify-between border-b border-slate-200 border-dashed pb-1">
                                                 <span>Pakiet 51-100 szt.</span>
-                                                <span className="text-slate-500 font-medium">{centerName ? `Cena dla ${centerName}` : 'Cena ustalana indywidualnie'}</span>
+                                                <span className="text-slate-900 font-bold">40,00 PLN</span>
                                         </li>
                                         <li className="flex justify-between border-b border-slate-200 border-dashed pb-1">
                                             <span>Pakiet 101-200 szt.</span>
-                                            <span className="text-slate-500 font-medium">{centerName ? `Cena dla ${centerName}` : 'Cena ustalana indywidualnie'}</span>
+                                            <span className="text-slate-900 font-bold">35,00 PLN</span>
                                         </li>
                                         <li className="flex justify-between">
                                             <span className="font-bold text-blue-900">Pakiet powyżej 200 szt.</span>
-                                            <span className="text-slate-500 font-medium">{centerName ? `Cena dla ${centerName}` : 'Cena ustalana indywidualnie'}</span>
+                                            <span className="text-slate-900 font-bold">30,00 PLN</span>
                                         </li>
                                     </ul>
                                 </div>

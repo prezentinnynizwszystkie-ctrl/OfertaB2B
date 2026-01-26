@@ -11,7 +11,7 @@ const ImplementationSection: React.FC<ImplementationSectionProps> = ({ centerNam
       id: 1,
       title: "Wdrożenie i Branding",
       icon: "fa-box-open",
-      desc: "Po podpisaniu umowy otrzymujesz \"Pakiet Startowy\": standy, plakaty i Karty Aktywacyjne spójne z Twoją marką. Gotowość od 1. dnia."
+      desc: "Po podpisaniu umowy otrzymujesz \"Pakiet Startowy\": standy, plakaty i Karty Aktywacyjne spójne z Twoją marką. Wdrożymy system w maksymalnie 7 dni."
     },
     {
       id: 2,
@@ -23,19 +23,13 @@ const ImplementationSection: React.FC<ImplementationSectionProps> = ({ centerNam
       id: 3,
       title: "Ruch Rodzica",
       icon: "fa-mobile-screen",
-      desc: "Rodzic skanuje kod telefonem. W intuicyjnym kreatorze dodaje zdjęcie i imię dziecka. Całość zajmuje 3 minuty."
+      desc: "Rodzic skanuje kod telefonem. W intuicyjnym kreatorze uzupełnia dane do personalizacji. Całość zajmuje 3 minuty."
     },
     {
       id: 4,
-      title: "Produkcja w tle",
-      icon: "fa-gears",
-      desc: "System automatycznie tworzy wideo-bajkę w ok. 30 min. Dzieci bawią się na sali, a Ty nie angażujesz żadnych zasobów."
-    },
-    {
-      id: 5,
-      title: "Efekt WOW",
+      title: "BAJKA JEST GOTOWA!",
       icon: "fa-envelope-open-text",
-      desc: "Rodzic otrzymuje SMS z gotową bajką. Może ją obejrzeć od razu i udostępnić gościom poprzez Karty Gościa."
+      desc: "Rodzic otrzymuje SMS lub E-mail z gotową bajką. Może ją obejrzeć lub pobrać i udostępnić wszystkim gościom."
     }
   ];
 
@@ -125,7 +119,7 @@ const ImplementationSection: React.FC<ImplementationSectionProps> = ({ centerNam
                 </div>
             </div>
 
-            {/* SEKCJA 2: Działania po stronie Klienta (Kroki 3, 4, 5) */}
+            {/* SEKCJA 2: Działania po stronie Klienta (Kroki 3, 4) */}
              <div className="w-full">
                 <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
                      <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center shadow-md">
@@ -134,7 +128,8 @@ const ImplementationSection: React.FC<ImplementationSectionProps> = ({ centerNam
                     <h3 className="text-lg md:text-xl font-black text-slate-800 uppercase tracking-tight">Działania po stronie Klienta</h3>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
+                {/* Zmiana grid-cols-3 na grid-cols-2 bo mamy teraz 2 kroki */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                     {clientSteps.map((s) => (
                         <div key={s.id} className="bg-white p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all flex flex-col items-center text-center h-full justify-start group">
                             <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center text-lg md:text-xl mb-3 group-hover:scale-110 transition-transform shadow-sm">

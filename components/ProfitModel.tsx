@@ -66,7 +66,7 @@ const ProfitModel: React.FC<ProfitModelProps> = ({ centerName }) => {
              </div>
              
              <div className="space-y-3 text-xs md:text-sm text-slate-600 flex-1">
-                <p><strong className="text-slate-900 font-bold block mb-0.5">Zasada (50/50):</strong> Rozliczenie następuje wyłącznie za faktycznie sprzedane bajki. Model ten obejmuje zarówno sprzedaż w pakietach urodzinowych, jak i sprzedaż indywidualną.</p>
+                <p><strong className="text-slate-900 font-bold block mb-0.5">Zasada (50/35/15):</strong> Rozliczenie następuje wyłącznie za faktycznie sprzedane bajki. Model ten obejmuje zarówno sprzedaż w pakietach urodzinowych, jak i sprzedaż indywidualną.</p>
                 
                 <div className="bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
                     <div className="flex justify-between items-center mb-1 border-b border-slate-100 pb-1">
@@ -76,7 +76,7 @@ const ProfitModel: React.FC<ProfitModelProps> = ({ centerName }) => {
                     <div className="flex justify-between items-center text-[10px] md:text-xs bg-green-50 px-2 py-1 rounded text-green-800 font-bold mt-1">
                         <span>Podział zysków:</span>
                         {/* Dynamiczny podział zysków */}
-                        <span>50% Dostawca / 50% {centerName || 'Partner'}</span>
+                        <span>50% Dostawca / 35% {centerName || 'Partner'} / 15% Prowizja dla obsługi</span>
                     </div>
                 </div>
 

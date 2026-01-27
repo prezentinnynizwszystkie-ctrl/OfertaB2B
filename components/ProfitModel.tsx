@@ -12,8 +12,11 @@ const ProfitModel: React.FC<ProfitModelProps> = ({ centerName }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const touchStart = useRef<number | null>(null);
   
-  // Obliczenia: Liczba imprez * 67% (zainteresowanie) * 49 zł (zysk partnera)
-  const estimatedProfit = parties ? Math.round(Number(parties) * 0.67 * 49) : 0;
+  // Obliczenia: Liczba imprez * 67% (zainteresowanie) * 52 zł (zysk partnera)
+  const estimatedProfit = parties ? Math.round(Number(parties) * 0.67 * 52) : 0;
+  
+  // Obliczenia: Prowizja dla pracowników (15% od ceny 149zł = 22.35zł)
+  const staffCommission = parties ? Math.round(Number(parties) * 0.67 * 22.35) : 0;
 
   // Slider navigation
   const totalSlides = 2; // Mamy 2 opcje
@@ -270,33 +273,47 @@ const ProfitModel: React.FC<ProfitModelProps> = ({ centerName }) => {
                 {/* Separator */}
                 <div className="hidden md:block w-px h-16 bg-white/10"></div>
 
-                {/* Część 2: Kalkulator */}
+                {/* Część 2: Kalkulator - ZMODYFIKOWANA */}
                 <div className="flex-1 w-full bg-white/5 rounded-xl p-3 border border-white/10 backdrop-blur-sm">
                     <div className="flex flex-col gap-2">
                         <label className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-blue-200 text-center md:text-left">
-                            Policz potencjalne zyski (Twoja marża ~49zł/szt)
+                            Policz potencjalne zyski
                         </label>
-                        <div className="flex items-center gap-3">
-                            <div className="relative flex-1">
+                        <div className="flex items-center gap-2 md:gap-3">
+                            
+                            {/* Input - zmniejszona szerokość */}
+                            <div className="relative w-20 md:w-28 shrink-0">
                                 <input 
                                     type="number" 
                                     placeholder="0"
                                     value={parties}
                                     onChange={(e) => setParties(e.target.value)}
-                                    className="w-full bg-white text-slate-900 text-center font-bold rounded-lg py-2 px-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-slate-300"
+                                    className="w-full bg-white text-slate-900 text-center font-bold rounded-lg py-2 px-1 md:px-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-slate-300"
                                 />
-                                <span className="absolute -top-4 left-0 w-full text-center text-[9px] text-blue-300">Ile przyjęć miesięcznie?</span>
+                                <span className="absolute -top-4 left-0 w-full text-center text-[9px] text-blue-300 whitespace-nowrap">Imprez / msc</span>
                             </div>
+
                             <span className="text-blue-300 font-black">=</span>
-                            <div className="flex-1 bg-green-500/20 border border-green-400/30 rounded-lg py-2 px-2 text-center min-w-[100px]">
-                                <span className="block text-green-300 font-black text-lg md:text-xl leading-none">
+
+                            {/* Box 1: Twój Zysk */}
+                            <div className="flex-1 bg-green-500/20 border border-green-400/30 rounded-lg py-2 px-1 text-center">
+                                <span className="block text-green-300 font-black text-base md:text-xl leading-none">
                                     {estimatedProfit.toLocaleString()} zł
                                 </span>
-                                <span className="text-[9px] text-green-200/80 uppercase font-bold">Extra Zysku</span>
+                                <span className="text-[8px] md:text-[9px] text-green-200/80 uppercase font-bold block mt-1">Twój Zysk (35%)</span>
                             </div>
+
+                            {/* Box 2: Dla Pracowników (15%) */}
+                            <div className="flex-1 bg-indigo-500/20 border border-indigo-400/30 rounded-lg py-2 px-1 text-center">
+                                <span className="block text-indigo-300 font-black text-base md:text-xl leading-none">
+                                    {staffCommission.toLocaleString()} zł
+                                </span>
+                                <span className="text-[8px] md:text-[9px] text-indigo-200/80 uppercase font-bold block mt-1 whitespace-nowrap">Dla Twoich pracowników (15%)</span>
+                            </div>
+
                         </div>
                         <p className="text-[9px] text-blue-300/60 text-center mt-1">
-                            *Szacunki: cena sprzedaży 99 zł, konwersja 67%.
+                            *Szacunki: cena 149 zł, konwersja 67%. Prowizja załogi: 15%.
                         </p>
                     </div>
                 </div>

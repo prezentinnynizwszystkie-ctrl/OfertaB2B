@@ -144,7 +144,7 @@ const ImplementationSection: React.FC<ImplementationSectionProps> = ({ centerNam
                             {/* LINK TESTOWY DLA KROKU 3 - Otwiera w nowej karcie */}
                             {s.id === 3 && (
                                 <a 
-                                    href="https://copy-of-knotek-v10-06-380221505176.us-west1.run.app"
+                                    href="https://knotek-v11-380221505176.us-west1.run.app"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="mt-4 px-5 py-2 bg-blue-600 text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"

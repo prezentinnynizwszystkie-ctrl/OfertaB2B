@@ -13,7 +13,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ centerName }) => {
          
          {/* Napis główny */}
          <h2 className="text-xl md:text-3xl font-black text-slate-900 uppercase italic tracking-tight text-center">
-            Zobacz fragmenty przykładowej AudioBajki!
+            ZOBACZ JAK TO DZIAŁA!
          </h2>
 
          {/* Napis przeniesiony NAD wideo */}

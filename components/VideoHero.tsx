@@ -20,11 +20,11 @@ const VideoHero: React.FC = () => {
         <video
           ref={videoRef}
           className="w-full h-auto block"
-          poster="https://pbyfajvltehsuugpayej.supabase.co/storage/v1/object/public/MainApp/BirthdayApp/PosterVideoHero3.webp"
+          poster="https://pbyfajvltehsuugpayej.supabase.co/storage/v1/object/public/PartnersApp/Video/posterending1.webp"
           controls={isPlaying}
           playsInline
         >
-          <source src="https://pbyfajvltehsuugpayej.supabase.co/storage/v1/object/public/MainApp/BirthdayApp/https://pbyfajvltehsuugpayej.supabase.co/storage/v1/object/public/PartnersApp/Video/FilmReklamowy1.mp4" type="video/mp4" />
+          <source src="https://pbyfajvltehsuugpayej.supabase.co/storage/v1/object/public/PartnersApp/Video/FilmReklamowy1.mp4" type="video/mp4" />
         </video>
 
         {!isPlaying && (

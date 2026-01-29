@@ -24,7 +24,7 @@ const VideoHero: React.FC = () => {
           controls={isPlaying}
           playsInline
         >
-          <source src="https://pbyfajvltehsuugpayej.supabase.co/storage/v1/object/public/PartnersApp/Video/FilmReklamowy1.mp4" type="video/mp4" />
+          <source src="https://pbyfajvltehsuugpayej.supabase.co/storage/v1/object/public/PartnersApp/Video/Ofertowe/OfferMoviePlaygroundsV1.0.mp4" type="video/mp4" />
         </video>
 
         {!isPlaying && (

@@ -168,19 +168,19 @@ const ProfitModel: React.FC<ProfitModelProps> = ({ centerName }) => {
                              </div>
                              
                              <div className="space-y-3 text-xs text-slate-600 flex-1">
-                                <p><strong className="text-slate-900 font-bold block mb-0.5">Zasada (50/50):</strong> Rozliczenie następuje wyłącznie za faktycznie sprzedane bajki. Model ten obejmuje zarówno sprzedaż w pakietach urodzinowych, jak i sprzedaż indywidualną.</p>
+                                <p><strong className="text-slate-900 font-bold block mb-0.5">Zasada (50/35/15):</strong> Rozliczenie następuje wyłącznie za faktycznie sprzedane bajki. Model ten obejmuje zarówno sprzedaż w pakietach urodzinowych, jak i sprzedaż indywidualną.</p>
                                 
                                 <div className="bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
                                     <div className="flex justify-between items-center mb-1 border-b border-slate-100 pb-1">
                                         <span>Sugerowana cena detaliczna:</span>
-                                        <span className="font-black text-slate-900 text-base">99,00 PLN <span className="text-[10px] font-normal text-slate-400">brutto</span></span>
+                                        <span className="font-black text-slate-900 text-base">149,00 PLN <span className="text-[10px] font-normal text-slate-400">brutto</span></span>
                                     </div>
                                     <div className="mb-1 text-[10px] text-slate-500 font-medium">
                                         Finalna kwota sprzedaży ustalana jest indywidualnie.
                                     </div>
                                     <div className="flex justify-between items-center text-[10px] bg-green-50 px-2 py-1 rounded text-green-800 font-bold mt-1">
                                         <span>Podział zysków:</span>
-                                        <span>50% Dostawca / 50% {centerName || 'Partner'}</span>
+                                        <span>50% Dost. / 35% Partner / 15% Obsługa</span>
                                     </div>
                                 </div>
 
@@ -221,23 +221,23 @@ const ProfitModel: React.FC<ProfitModelProps> = ({ centerName }) => {
                                     <ul className="space-y-1.5 text-[10px] font-medium">
                                         <li className="flex justify-between border-b border-slate-200 border-dashed pb-1">
                                             <span>Pakiet do 25 szt.</span>
-                                            <span className="text-slate-900 font-bold">49,00 PLN</span>
+                                            <span className="text-slate-900 font-bold">70,00 PLN</span>
                                         </li>
                                         <li className="flex justify-between border-b border-slate-200 border-dashed pb-1">
                                             <span>Pakiet 26-50 szt.</span>
-                                            <span className="text-slate-900 font-bold">45,00 PLN</span>
+                                            <span className="text-slate-900 font-bold">65,00 PLN</span>
                                         </li>
                                          <li className="flex justify-between border-b border-slate-200 border-dashed pb-1">
                                                 <span>Pakiet 51-100 szt.</span>
-                                                <span className="text-slate-900 font-bold">40,00 PLN</span>
+                                                <span className="text-slate-900 font-bold">60,00 PLN</span>
                                         </li>
                                         <li className="flex justify-between border-b border-slate-200 border-dashed pb-1">
                                             <span>Pakiet 101-200 szt.</span>
-                                            <span className="text-slate-900 font-bold">35,00 PLN</span>
+                                            <span className="text-slate-900 font-bold">55,00 PLN</span>
                                         </li>
                                         <li className="flex justify-between">
                                             <span className="font-bold text-blue-900">Pakiet powyżej 200 szt.</span>
-                                            <span className="text-slate-900 font-bold">30,00 PLN</span>
+                                            <span className="text-slate-900 font-bold">50,00 PLN</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -279,36 +279,36 @@ const ProfitModel: React.FC<ProfitModelProps> = ({ centerName }) => {
                         <label className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-blue-200 text-center md:text-left">
                             Policz potencjalne zyski
                         </label>
-                        <div className="flex items-center gap-2 md:gap-3">
+                        <div className="flex items-center gap-2">
                             
                             {/* Input - zmniejszona szerokość */}
-                            <div className="relative w-20 md:w-28 shrink-0">
+                            <div className="relative w-16 md:w-28 shrink-0">
                                 <input 
                                     type="number" 
                                     placeholder="0"
                                     value={parties}
                                     onChange={(e) => setParties(e.target.value)}
-                                    className="w-full bg-white text-slate-900 text-center font-bold rounded-lg py-2 px-1 md:px-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-slate-300"
+                                    className="w-full bg-white text-slate-900 text-center font-bold rounded-lg py-2 px-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-slate-300"
                                 />
-                                <span className="absolute -top-4 left-0 w-full text-center text-[9px] text-blue-300 whitespace-nowrap">Imprez / msc</span>
+                                <span className="absolute -top-4 left-0 w-full text-center text-[9px] text-blue-300 whitespace-nowrap scale-90 md:scale-100">Imprez / msc</span>
                             </div>
 
                             <span className="text-blue-300 font-black">=</span>
 
                             {/* Box 1: Twój Zysk */}
-                            <div className="flex-1 bg-green-500/20 border border-green-400/30 rounded-lg py-2 px-1 text-center">
+                            <div className="flex-1 bg-green-500/20 border border-green-400/30 rounded-lg py-2 px-1 text-center min-w-0">
                                 <span className="block text-green-300 font-black text-base md:text-xl leading-none">
                                     {estimatedProfit.toLocaleString()} zł
                                 </span>
-                                <span className="text-[8px] md:text-[9px] text-green-200/80 uppercase font-bold block mt-1">Twój Zysk (35%)</span>
+                                <span className="text-[8px] md:text-[9px] text-green-200/80 uppercase font-bold block mt-1 truncate">Twój Zysk</span>
                             </div>
 
-                            {/* Box 2: Dla Pracowników (15%) */}
-                            <div className="flex-1 bg-indigo-500/20 border border-indigo-400/30 rounded-lg py-2 px-1 text-center">
+                            {/* Box 2: Dla Pracowników (15%) - Skrócony tekst dla Mobile */}
+                            <div className="flex-1 bg-indigo-500/20 border border-indigo-400/30 rounded-lg py-2 px-1 text-center min-w-0">
                                 <span className="block text-indigo-300 font-black text-base md:text-xl leading-none">
                                     {staffCommission.toLocaleString()} zł
                                 </span>
-                                <span className="text-[8px] md:text-[9px] text-indigo-200/80 uppercase font-bold block mt-1 whitespace-nowrap">Dla Twoich pracowników (15%)</span>
+                                <span className="text-[8px] md:text-[9px] text-indigo-200/80 uppercase font-bold block mt-1 truncate">Dla Załogi</span>
                             </div>
 
                         </div>
